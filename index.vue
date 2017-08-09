@@ -74,6 +74,7 @@
 
   const isLetter = /[a-zA-Z0-9]/;
   export default {
+    name:"letter-avatar",
     props: {
       size: Number,
       rounded: Boolean,
@@ -87,13 +88,15 @@
         return this.name[0].toUpperCase()
       },
       style() {
+        let name =this.name
         let letter;
-        if (!isLetter.test(this.name)) {
-          letter = alphabet[getIndexOfAlphabet(this.name[0])].toUpperCase();
+        if (!isLetter.test(name)) {
+          letter = alphabet[getIndexOfAlphabet(name[0])].toUpperCase();
         } else {
-          letter = this.name[0].toUpperCase()
+          letter = name[0].toUpperCase()
         }
-        let size = this.size ? this.size > 0 ? this.size : this.size * -1 : 50;
+        let SIZE=this.size
+        let size = SIZE ? SIZE > 0 ? SIZE: SIZE * -1 : 50;
         return {
           width: `${size}px`,
           height: `${size}px`,
