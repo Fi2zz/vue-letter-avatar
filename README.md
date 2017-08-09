@@ -2,10 +2,12 @@
 
 
 props
-
-  size    Number  default  50   optional  => size of avatar
+  |prop|type|default|required|description
+  |---|---|---|---|---|
   
-  name    String  default       required  => first letter or name of avatar
+  |size |   Number  |  50  | optional |size of avatar|
   
-  rounded Boolean default true  optional  => enable round avatar
+  |name  |  String |      |  required |first letter or name of avatar|
+  
+  |rounded| Boolean | true | optional |enable round avatar|
 
